@@ -12,8 +12,7 @@ window.addEventListener('load', () => {
             lat = position.coords.latitude;
             long = position.coords.longitude;
 
-            const proxy = 'https://cors-anywhere.herokuapp.com/';
-            const api = `${proxy}http://api.weatherstack.com/current?access_key=f6dc20ba08bf16b0cd9137d0c3cfe0d1&query=${lat}, ${long}`;
+            const api = `http://api.weatherstack.com/current?access_key=f6dc20ba08bf16b0cd9137d0c3cfe0d1&query=${lat}, ${long}`;
 
             fetch(api)
                 .then(response => {
